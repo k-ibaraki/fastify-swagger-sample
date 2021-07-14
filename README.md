@@ -15,6 +15,6 @@ npm run dev
 ```
 
 - サーバー起動後、自動生成されたOpenAPIドキュメントにアクセス
-  - webui : <http://127.0.0.1:3000/docs/>
-  - json : <http://127.0.0.1:3000/docs/json>
-  - yaml : <http://127.0.0.1:3000/docs/yaml>
+  - WEB-UI : <http://127.0.0.1:3000/docs/>
+  - JSON : <http://127.0.0.1:3000/docs/json>
+  - YAML : <http://127.0.0.1:3000/docs/yaml>
