@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "fastify": "^3.19.1",
+    "fastify-cors": "^6.0.2",
     "fastify-swagger": "^4.8.3"
   }
 }

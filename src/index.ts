@@ -7,9 +7,15 @@ const server: fastify.FastifyInstance = fastify.fastify({ logger: true })
 // fastifySwaggerを動かす最低限の実装
 server.register(fastifySwagger, {
   routePrefix: '/docs',
-  openapi: {},
+  openapi: {
+    servers: [ { url : "http://127.0.0.1:3000/" } ],
+  },
   exposeRoute: true,
 })
+server.register(require('fastify-cors'), { 
+  // put your options here
+})
+
 server.get('/ping', async (request, reply) => {
   return { pong: 'it worked!' }
 })
@@ -82,6 +88,5 @@ interface Request2 extends fastify.RequestGenericInterface {
 server.get<Request2, unknown, fastify.FastifySchema>('/paramstest/:test_param', schema2, async (request, reply) => {
   return { test_response2: request.params.test_param }
 })
-
 
 server.listen(3000)
